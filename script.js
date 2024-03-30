@@ -51,13 +51,12 @@ function submitClicked(event){
  * A function to delete a row when the delete button is clicked
  */
 function deleteThis(event){
-    console.log('you clicked delete this!');
     //create a variable for which button specifically was clicked
     let buttonClicked = event.target;
 
     //select the button's parent parent element to delete the row 
     let rowToDelete = buttonClicked.parentElement.parentElement;
-console.log('this is a test to see if the parent element was captured', rowToDelete );
+
     //use .remove method to remove the row
     rowToDelete.remove();
 }
