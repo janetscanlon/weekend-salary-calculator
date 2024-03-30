@@ -49,8 +49,20 @@ function submitClicked(event){
     // select the <span>
     let monthlyCount = document.getElementById('monthlyCount')
     console.log('test to see if monthly count was selected', monthlyCount)
-    //update the <span>'s text content 
-    monthlyCount.innerText = (totalMonthlyValue)/12;
+    //update the <span>'s text content and divide annualSalary by 12 to get the monthly total 
+    totalMonthlyValue = (totalMonthlyValue)/12 
+    
+    monthlyCount.innerText = (totalMonthlyValue);
+
+    //select the footer element by class 
+    let footer = document.getElementsByClassName('over-budget');
+    console.log('this is a test to verify footer element selection', footer);
+
+    //conditional for the totalMonthlyValue over 20000
+    if(totalMonthlyValue > 20000){
+        console.log('over budget!');
+    }
+
 }
 
 
