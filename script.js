@@ -44,6 +44,13 @@ function submitClicked(event){
 
     totalMonthlyValue += Number(newAnnualSalary);
     console.log('test for total monthly value', totalMonthlyValue);
+
+    //update the #monthlyCount <span>: 
+    // select the <span>
+    let monthlyCount = document.getElementById('monthlyCount')
+    console.log('test to see if monthly count was selected', monthlyCount)
+    //update the <span>'s text content 
+    monthlyCount.innerText = totalMonthlyValue;
 }
 
 
