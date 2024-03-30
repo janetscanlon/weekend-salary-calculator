@@ -25,7 +25,14 @@ function submitClicked(event){
                             <td><button data-testid="deleteButton"> Delete
                             </button></td>;`
 
+
+    //select the <tbody> element so we can add our newEmployeeInfo to it! 
+    let newEmployeeRow = document.getElementById('tableBody');
+
+    //Manipulate the DOM to add the newEmployeeInfo to the newEmployeeRow using .innerHTML
+    newEmployeeRow.innerHTML += newEmployeeInfo;
     console.log('all of the new values are:', newFirstName, newLastName, newId, newTitle,newAnnualSalary);
     console.log('test for the html with all the new inputs', newEmployeeInfo);
+    console.log('this is a test to see if we properly selected the table body element', newEmployeeRow)
     
 }
