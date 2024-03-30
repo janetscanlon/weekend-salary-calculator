@@ -45,3 +45,11 @@ function submitClicked(event){
     totalMonthlyValue += Number(newAnnualSalary);
     console.log('test for total monthly value', totalMonthlyValue);
 }
+
+
+/**
+ * A function to delete a row when the delete button is clicked
+ */
+function deleteThis(event){
+    console.log('you clicked delete this!');
+}
