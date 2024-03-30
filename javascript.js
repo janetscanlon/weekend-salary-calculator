@@ -1,6 +1,7 @@
 console.log('JS is working!');
 
-
+//global value for the total monthly amount
+let totalMonthlyValue = 0; 
 /**
  * A function for when the submit button is clicked
  */
@@ -23,7 +24,7 @@ function submitClicked(event){
                             <td>${newTitle}</td>
                             <td>${newAnnualSalary}</td>
                             <td><button data-testid="deleteButton"> Delete
-                            </button></td>;`
+                            </button></td>`
 
 
     //select the <tbody> element so we can add our newEmployeeInfo to it! 
@@ -38,4 +39,9 @@ function submitClicked(event){
     document.getElementById('id-text').value = '';
     document.getElementById('title-text').value = '';
     document.getElementById('annualSalary-text').value = '';
+
+    //add total monthly amount to the footer element 
+
+    totalMonthlyValue += Number(newAnnualSalary);
+    console.log('test for total monthly value', totalMonthlyValue);
 }
