@@ -9,5 +9,11 @@ function submitClicked(event){
     event.preventDefault();
 
     let newFirstName = document.getElementById('firstName-text').value;
-    console.log('this is the new First Name', newFirstName);
+    let newLastName = document.getElementById('lastName-text').value;
+    let newId = document.getElementById('id-text').value;
+    let newtitle = document.getElementById('title-text').value;
+    let newAnnualSalary = document.getElementById('annualSalary-text').value;
+
+    console.log('all of the new values are:', newFirstName, newLastName, newId, newtitle,newAnnualSalary)
+    
 }
