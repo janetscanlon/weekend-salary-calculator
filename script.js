@@ -23,7 +23,7 @@ function submitClicked(event){
                             <td>${newId}</td>
                             <td>${newTitle}</td>
                             <td>${newAnnualSalary}</td>
-                            <td><button data-testid="deleteButton"> Delete
+                            <td><button data-testid="deleteButton" id="deleteButton" onclick="deleteThis(event)"> Delete
                             </button></td>`
 
 
@@ -52,4 +52,12 @@ function submitClicked(event){
  */
 function deleteThis(event){
     console.log('you clicked delete this!');
+    //create a variable for which button specifically was clicked
+    let buttonClicked = event.target;
+
+    //select the button's parent parent element to delete the row 
+    let rowToDelete = buttonClicked.parentElement.parentElement;
+console.log('this is a test to see if the parent element was captured', rowToDelete );
+    //use .remove method to remove the row
+    rowToDelete.remove();
 }
