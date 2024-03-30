@@ -50,7 +50,7 @@ function submitClicked(event){
     let monthlyCount = document.getElementById('monthlyCount')
     console.log('test to see if monthly count was selected', monthlyCount)
     //update the <span>'s text content 
-    monthlyCount.innerText = totalMonthlyValue;
+    monthlyCount.innerText = (totalMonthlyValue)/12;
 }
 
 
