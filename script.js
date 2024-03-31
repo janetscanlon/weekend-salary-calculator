@@ -41,7 +41,7 @@ function submitClicked(event){
     document.getElementById('annualSalary-text').value = '';
 
     //add total monthly amount to the footer element 
-
+    //update the <span>'s text content and divide annualSalary by 12 to get the monthly total 
     totalMonthlyValue += Number(newAnnualSalary)/12;
     console.log('test for total monthly value', totalMonthlyValue);
 
@@ -49,7 +49,7 @@ function submitClicked(event){
     // select the <span>
     let monthlyCount = document.getElementById('monthlyCount')
     console.log('test to see if monthly count was selected', monthlyCount)
-    //update the <span>'s text content and divide annualSalary by 12 to get the monthly total 
+    
     
     //console.log('test for total monthly value', totalMonthlyValue);
     monthlyCount.textContent = (totalMonthlyValue);
