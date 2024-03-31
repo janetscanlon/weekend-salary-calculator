@@ -42,7 +42,7 @@ function submitClicked(event){
 
     //add total monthly amount to the footer element 
 
-    totalMonthlyValue += Number(newAnnualSalary);
+    totalMonthlyValue += Number(newAnnualSalary)/12;
     console.log('test for total monthly value', totalMonthlyValue);
 
     //update the #monthlyCount <span>: 
@@ -50,9 +50,9 @@ function submitClicked(event){
     let monthlyCount = document.getElementById('monthlyCount')
     console.log('test to see if monthly count was selected', monthlyCount)
     //update the <span>'s text content and divide annualSalary by 12 to get the monthly total 
-    totalMonthlyValue = (totalMonthlyValue)/12 
     
-    monthlyCount.innerText = (totalMonthlyValue);
+    //console.log('test for total monthly value', totalMonthlyValue);
+    monthlyCount.textContent = (totalMonthlyValue);
 
     //select the footer element by class 
     let footer = document.getElementById('footer');
@@ -63,7 +63,7 @@ function submitClicked(event){
         console.log('test for overbudget conditional', footer);
         
         //implement footer color class toggle 
-    footer.classList.toggle("footerToggle");
+    footer.classList.toggle("over-budget");
 
      }
 
