@@ -55,13 +55,17 @@ function submitClicked(event){
     monthlyCount.innerText = (totalMonthlyValue);
 
     //select the footer element by class 
-    let footer = document.getElementsByClassName('over-budget');
+    let footer = document.getElementById('footer');
     console.log('this is a test to verify footer element selection', footer);
 
     //conditional for the totalMonthlyValue over 20000
     if(totalMonthlyValue > 20000){
-        console.log('over budget!');
-    }
+        console.log('test for overbudget conditional', footer);
+        
+        //implement footer color class toggle 
+    footer.classList.toggle("footerToggle");
+
+     }
 
 }
 
@@ -79,3 +83,6 @@ function deleteThis(event){
     //use .remove method to remove the row
     rowToDelete.remove();
 }
+
+
+ 

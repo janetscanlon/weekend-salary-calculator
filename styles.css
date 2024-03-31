@@ -37,3 +37,12 @@ table {
   tbody tr:nth-child(even){
     background: #dcdcdc;
   }
+
+  /*    footer toggle styling! */
+
+  .footerToggle{
+    color: red;
+
+  }
+
+  
